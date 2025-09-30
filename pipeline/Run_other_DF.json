@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"method": "POST",
 					"url": "https://management.azure.com/subscriptions/3271a2da-deaf-4300-bdd0-ed4c308e6621/resourceGroups/srini_resource_1/providers/Microsoft.DataFactory/factories/azure-data-factory01594/pipelines/RESTAPI/createRun?api-version=2018-06-01",
+					"body": "{\"Df\"}",
 					"authentication": {
 						"type": "MSI",
 						"resource": "https://management.azure.com/"
