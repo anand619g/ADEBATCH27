@@ -1,0 +1,38 @@
+{
+	"name": "KV_TEST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp_sal.csv",
+				"folderPath": "Input",
+				"container": "datasets"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PAR1\u0015\u0000\u00156\u0015:",
+				"type": "String"
+			},
+			{
+				"name": "\u0015\u0006\u0015\u0000\u0015\u0006\u0015\b\u001c\u0018\u0003103\u0018\u0003101\u0016\u0000\u0000\u0000\u0000\u001bh\u0002\u0000\u0000\u0000\u0003\u0007\u0003\u0000\u0000\u0000101\u0003\u0000\u0000\u0000102\u0003\u0000\u0000\u0000103\u0015\u0000\u0015N\u0015N",
+				"type": "String"
+			},
+			{
+				"name": "\u0015\u0006\u0015\u0000\u0015\u0006\u0015\b\u001c\u0018\bJennifer\u0018\u0006Donald\u0016\u0000\u0000\u0000\u0000'@\u0002\u0000\u0000\u0000\u0003\u0007\u0006\u0000\u0000\u0000Donald\u0007\u0005",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

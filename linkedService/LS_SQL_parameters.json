@@ -1,0 +1,22 @@
+{
+	"name": "LS_SQL_parameters",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"db_Name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqlserverbatch27.database.windows.net",
+			"database": "@{linkedService().db_Name}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "anand",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDFGOEVGMDlFLUNCMkQtNDU5OC1CMjIzLTA4N0U4QUNFQzM0MV9hNjAzNWVlMS1kNTM1LTRjYTUtOWVhMS02YmVkY2M3ZjU3YjEiDQp9"
+		}
+	}
+}

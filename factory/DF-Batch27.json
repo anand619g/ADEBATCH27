@@ -1,0 +1,19 @@
+{
+	"name": "DF-Batch27",
+	"properties": {
+		"globalConfigurations": {
+			"mountedConfiguration": [
+				{
+					"workspaceId": "dad38179-bb12-4cf0-b902-a58c1c69d15d",
+					"artifactId": "044a219c-7f09-478d-a2d7-d6abf07e6060"
+				}
+			]
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a4500ed3-2fec-4df1-8611-a62bbc24500a",
+		"tenantId": "4eb42a16-d5f1-400e-a337-30639ca7121e"
+	}
+}
