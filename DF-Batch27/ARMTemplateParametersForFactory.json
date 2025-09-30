@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DF-Batch27"
+		},
+		"LS_ADLS_KV_connectionString": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=adlsbatch27;"
+		},
+		"LS_SQL_password": {
+			"value": ""
+		},
+		"LS_SQL_parameters_password": {
+			"value": ""
+		},
+		"LS_adls_connectionString": {
+			"value": ""
+		},
+		"KVbatch27_properties_typeProperties_baseUrl": {
+			"value": "https://kv-batch27.vault.azure.net/"
+		},
+		"LS_SQL_properties_typeProperties_server": {
+			"value": "sqlserverbatch27.database.windows.net"
+		},
+		"LS_SQL_properties_typeProperties_database": {
+			"value": "dbbatch27"
+		},
+		"LS_SQL_properties_typeProperties_userName": {
+			"value": "anand"
+		},
+		"LS_SQL_KV_properties_typeProperties_server": {
+			"value": "sqlserverbatch27.database.windows.net"
+		},
+		"LS_SQL_KV_properties_typeProperties_database": {
+			"value": "dbbatch27"
+		},
+		"LS_SQL_KV_properties_typeProperties_userName": {
+			"value": "anand"
+		},
+		"LS_SQL_parameters_properties_typeProperties_server": {
+			"value": "sqlserverbatch27.database.windows.net"
+		},
+		"LS_SQL_parameters_properties_typeProperties_database": {
+			"value": "@{linkedService().db_Name}"
+		},
+		"LS_SQL_parameters_properties_typeProperties_userName": {
+			"value": "anand"
+		},
+		"Tumbling_New_trigger_properties_pipeline_parameters_Window_Start_Time": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"Tumbling_New_trigger_properties_pipeline_parameters_Window_End_Time": {
+			"value": "@trigger().outputs.windowEndTime"
+		},
+		"event_based_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/3271a2da-deaf-4300-bdd0-ed4c308e6621/resourceGroups/RGBatch27/providers/Microsoft.Storage/storageAccounts/adlsbatch27"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/3271a2da-deaf-4300-bdd0-ed4c308e6621/resourceGroups/RGBatch27/providers/Microsoft.Storage/storageAccounts/adlsbatch27"
+		}
+	}
+}
