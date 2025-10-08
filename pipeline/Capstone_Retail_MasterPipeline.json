@@ -1,0 +1,47 @@
+{
+	"name": "Capstone_Retail_MasterPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Capstone_Source_2_Staging",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Capstone_Retail_Source_2_Staging",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Capstone_Stg_2_DW",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Capstone_Source_2_Staging",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Capstone_Retail_Staging_2_DW",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
